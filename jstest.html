@@ -5,13 +5,29 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!--Link-->
 <!--script-->
 <body>
 	<main>
-		<h1>
+		<h1 id="h1id">
 			test
 		</h1>
+        <h2>Jstest</h2>
+        <style>
+            h1{
+                color:red;
+                font-weight:bold;
+            }
+        </style>
+        <script>
+            $(function(){
+                $("h1id").click(function(){
+                    $('h1').css('color','blue');
+                });
+	　　　　　});
+            
+        </script>
 	</main>
 
 </body>
