@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -14,6 +15,15 @@
 			test
 		</h1>
         <h2>Jstest</h2>
+        
+        <ul>
+	       <li class="list">リスト1</li>
+	       <li class="list">リスト2</li>
+	       <li class="list">リスト3</li>
+        </ul>
+        
+        <input type="text">
+ 
         <style>
             h1{
                 color:red;
@@ -22,14 +32,28 @@
         </style>
         <script>
             $(function(){
-                $("h1id").click(function(){
-                    $('h1').css('color','blue');
-                });
-	　　　　　});
-            
+                $('h1').hover(
+                    function(){
+                        $('h1').fadeIn();
+                    }
+                    function(){
+                        $('h1').fadeOut();
+                }
+            );
+        });
+                
         </script>
 	</main>
 
 </body>
 
+ <!--$(function(){
+                //$("#h1id").load(function(){
+                    //$('h1').css('color','blue');
+                //});
+	　　     //}); 
 
+            //$('#h1id').click(function(){
+                //$('#h1id').hide();
+            //});-->
+       
