@@ -14,34 +14,26 @@
 		<h1 id="h1id">
 			test
 		</h1>
-        <h2>Jstest</h2>
+        <!--    HTML    -->
+    <div class="button">ボタン</div>
         
-        <ul>
-	       <li class="list">リスト1</li>
-	       <li class="list">リスト2</li>
-	       <li class="list">リスト3</li>
-        </ul>
+    <style>
+        .button {
+        padding: 5px 10px;
+        border:#666 solid 1px;
+        background:#FFF;
+        display:block;
+        width:100px;
+        text-align:center;
+        cursor:pointer;
+        }
+    </style>
         
-        <input type="text">
- 
-        <style>
-            h1{
-                color:red;
-                font-weight:bold;
-            }
-        </style>
         <script>
-            $(function(){
-                $('h1').hover(
-                    function(){
-                        $('h1').fadeIn();
-                    }
-                    function(){
-                        $('h1').fadeOut();
-                }
-            );
+        $(function(){
+          $(".button").click(function(){  
+            alert("クリックしますた");
         });
-                
         </script>
 	</main>
 
