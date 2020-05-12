@@ -6,7 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<title></title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <!--Link-->
 <!--script-->
 <body>
@@ -15,23 +15,47 @@
 			test
 		</h1>
 
-<div id="q31">
-        <img src="http://tokidoki-web.com/file0925.png"/>
+<!--    HTML    -->
+<div id="q46_box">
+    <label>オペランドＡ</label>
+        <input id="q46_val" type="text" size="3" width="50" />
+    <label>オペランドＢ</label>   
+    <input id="q46_subject" type="text" size="3" width="50" />
+    <select id="q46_select">
+        <option value="addition" >足し算</option>
+        <option value="subtraction" >引き算</option>
+        <option value="multiplication" >掛け算</option>
+        <option value="division" >割り算</option>
+    </select>
+    <input id="q46_button" type="button" value="計算" />
+    <p id="q46_answer"></p>
 </div>
 
         
-<style>
-
-</style>
-        
 <script>
 $(function(){
-    $("#q31 img").load(function(){
-        $(this).css({"width":"500","height":"300"});
-    });
-});  
+    var x=$("#q46_val").text();
+    console.log(x);
+    var y=$("#q46_subject").text();
+    console.log(y);
+    var keisan=$("#q46_select").attr(option);
+                             
+    funcplus(x,y,keisan);
+    //$("#q45_answer").text(goukei);
+    
+    
+    function funcplus(x,y,keisan){
+        console.log(x);
+        console.log(y);
+        console.log(keisan);
+        var goukei=parseInt(x)+parseInt(y);
+        //console.log(goukei);
+        $("#q45_answer").text(goukei);
+    }
+});
 </script>
-	</main>
+    
+</main>
 </body>
 
  <!--$(function(){
