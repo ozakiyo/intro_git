@@ -1,4 +1,53 @@
 
+<!--<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title></title>
+<!--Link-->
+<!--script-->
+<!--<body>
+	<main>
+		<h1 id="h1id">
+			test
+		</h1>
+        
+<div id="jqs-17-1">
+  <div class="box50">これはテストです。</div>
+  <button class="start">Start</button>
+  <button class="reset">Reset</button>
+</div>
+
+        
+<style>  
+    .box50{
+        width:200px;
+        margin-left: 300px;
+    }
+</style>
+
+<script
+  src="https://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+  crossorigin="anonymous">
+</script> 
+<script>
+$(window).on("load", function() {
+       rect();
+});
+  
+function rect(){
+    $("#jqs-17-1 .box50").animate({marginLeft:"-=500px"},7000,function(){
+        $("#jqs-17-1 .box50").removeAttr('style');
+        rect();
+     });
+}
+</script>
+    
+</main>
+</body>-->
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -6,7 +55,6 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<title></title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <!--Link-->
 <!--script-->
 <body>
@@ -14,57 +62,98 @@
 		<h1 id="h1id">
 			test
 		</h1>
-
-<!--    HTML    -->
-<div id="q46_box">
-    <label>オペランドＡ</label>
-        <input id="q46_val" type="text" size="3" width="50" />
-    <label>オペランドＢ</label>   
-    <input id="q46_subject" type="text" size="3" width="50" />
-    <select id="q46_select">
-        <option value="addition" >足し算</option>
-        <option value="subtraction" >引き算</option>
-        <option value="multiplication" >掛け算</option>
-        <option value="division" >割り算</option>
-    </select>
-    <input id="q46_button" type="button" value="計算" />
-    <p id="q46_answer"></p>
+ <!--<div id="info">
+    <div id="info_txt">チャレンジカップ 〇〇店エントリー受付中!</div>
+</div>-->
+<div id="ticker" rel="slide">
+<ul>
+<li><a href="#1">【News1】このテキストはNewsTicker用のダミーテキスト［1］です。</a></li>
+<li><a href="#2">【News2】このテキストはNewsTicker用のダミーテキスト［2］です。</a></li>
+<li><a href="#3">【News3】このテキストはNewsTicker用のダミーテキスト［3］です。</a></li>
+<li><a href="#4">【News4】このテキストはNewsTicker用のダミーテキスト［4］です。</a></li>
+<li><a href="#5">【News5】このテキストはNewsTicker用のダミーテキスト［5］です。</a></li>
+</ul>
 </div>
 
-        
+<style>
+#ticker {
+    margin: 0 auto;
+    padding: 10px;
+    width: 600px;
+    text-align: left;
+    border: #ccc 1px solid;
+    position: relative;
+    overflow: hidden;
+}
+ 
+#ticker ul {
+    width: 100%;
+    position: relative;
+}
+ 
+#ticker ul li {
+    width: 100%;
+    display: none;
+}  
+</style>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    
 <script>
 $(function(){
-    var x=$("#q46_val").text();
-    console.log(x);
-    var y=$("#q46_subject").text();
-    console.log(y);
-    var keisan=$("#q46_select").attr(option);
-                             
-    funcplus(x,y,keisan);
-    //$("#q45_answer").text(goukei);
-    
-    
-    function funcplus(x,y,keisan){
-        console.log(x);
-        console.log(y);
-        console.log(keisan);
-        var goukei=parseInt(x)+parseInt(y);
-        //console.log(goukei);
-        $("#q45_answer").text(goukei);
-    }
+    $(window).load(function(){
+        var setul = $('#ticker');//・ニュースティッカー用リスト一式を囲うエリアのクラス名（IDでも可）
+        var speed = 1000;//・切り替わる際のエフェクトスピード時間
+        var waiting_time = 3000;//・切り替わるまでの待機時間
+        var easing = 'swing';//・切り替わる際のエフェクトのイージング
+ 
+        setul.each(function(){
+            var choice = $(this).attr('rel'); // 'fade' or 'roll' or 'slide'
+ 
+            var this_obj = $(this);
+            var this_ul = this_obj.children('ul');
+            var this_li = this_obj.find('li');
+            var list = this_obj.find('li:first');
+ 
+            var ul_width = this_ul.width();
+            var list_height = this_li.height();
+            this_obj.css({height:(list_height)});
+            this_li.css({top:'0',left:'0',position:'absolute'});
+ 
+            var li_count = this_li.length;
+ 
+            if(choice == 'fade') {
+                list.css({display:'block',opacity:'0',zIndex:'98'}).stop().animate({opacity:'1'},speed,easing).addClass('showlist');
+                if(li_count > 1) {
+                    setInterval(function(){
+                        var active_show = this_obj.find('.showlist');
+                        active_show.animate({opacity:'0'},speed,easing,function(){
+                            $(this).next().css({display:'block',opacity:'0',zIndex:'99'}).animate({opacity:'1'},speed,easing).addClass('showlist').end().appendTo(this_ul).css({display:'none',zIndex:'98'}).removeClass('showlist');
+                        });
+                    },waiting_time);
+                }
+            } else if(choice == 'roll') {
+                list.css({top:'3em',display:'block',opacity:'0',zIndex:'98'}).stop().animate({top:'0',opacity:'1'},speed,easing).addClass('showlist');
+                if(li_count > 1) {
+                    setInterval(function(){
+                        var active_show = this_obj.find('.showlist');
+                        active_show.animate({top:'-3em',opacity:'0'},speed,easing).next().css({top:'3em',display:'block',opacity:'0',zIndex:'99'}).animate({top:'0',opacity:'1'},speed,easing).addClass('showlist').end().appendTo(this_ul).css({zIndex:'98'}).removeClass('showlist');
+                    },waiting_time);
+                }
+            } else if(choice == 'slide') {
+                list.css({left:(ul_width),display:'block',opacity:'0',zIndex:'98'}).stop().animate({left:'0',opacity:'1'},speed,easing).addClass('showlist');
+                if(li_count > 1) {
+                    setInterval(function(){
+                        var active_show = this_obj.find('.showlist');
+                        active_show.animate({left:(-(ul_width)),opacity:'0'},speed,easing).next().css({left:(ul_width),display:'block',opacity:'0',zIndex:'99'}).animate({left:'0',opacity:'1'},speed,easing).addClass('showlist').end().appendTo(this_ul).css({zIndex:'98'}).removeClass('showlist');
+                    },waiting_time);
+                }
+            }
+        });
+    });
 });
 </script>
+
     
 </main>
-</body>
-
- <!--$(function(){
-                //$("#h1id").load(function(){
-                    //$('h1').css('color','blue');
-                //});
-	　　     //}); 
-
-            //$('#h1id').click(function(){
-                //$('#h1id').hide();
-            //});-->
-       
+</body>       
