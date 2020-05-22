@@ -1,0 +1,129 @@
+<html lang="ja"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><!--スマホ対応-->
+<meta name="robots" content="nofollow,noindex,noarchive">
+<title>ミニ四駆ファンクラブ　｜　コジマ</title>
+<!--◎basic pack -->
+<link rel="stylesheet" href="../../tool/css/reset.css" type="text/css">
+<!--◎independent-->
+<link rel="stylesheet" href="css/mini4fanclub_pc.css" type="text/css" media="only screen and (min-width:769px)">
+<link rel="stylesheet" href="css/mini4fanclub_sp.css" type="text/css" media="only screen and (max-width:768px)">
+</head>
+
+<body>
+<div class="wrapper">
+<div class="wrap">
+<main>
+<h1 class="main_image"><img src="image/main-title.png" alt="コジマミニ四駆ファンクラブ" class="maintitle"></h1>
+<h2 class="kingcup_image"><img src="image/kingcuptitle.png" alt="キングカップタイトル" class="kingcuptitle"></h2>
+<h2 class="entry_button"><a href="https://twitter.com/kojimamini4wd/"><img src="image/entry_button.png" alt="優先エントリーはこちら" class="entry_pic_button" ontouchatart=""></a></h2>
+<!--<div id="info"><p id="info_txt">チャレンジカップ 〇〇店エントリー受付中!</p></div>-->
+<div id="ticker" rel="slide">
+<ul>
+<li><a href="#1">このテキストはNewsTicker用のダミーテキストです。</a></li>
+<li><a href="#2">このテキストはNewsTicker用のダミーテキストです。</a></li>
+<li><a href="#3">このテキストはNewsTicker用のダミーテキストです。</a></li>
+<li><a href="#4">このテキストはNewsTicker用のダミーテキストです。</a></li>
+<li><a href="#5">このテキストはNewsTicker用のダミーテキストです。</a></li>
+</ul>
+</div>
+<div class="section">
+<div class="item"><a href="/shop/toys/mini4/index.html" target="_blank"><img src="image/icon_king.png" alt="コジマKINGCUP情報"></a><p class="itemtext">コジマキングカップ</p><p class="itemtextw">2020</p></div>
+<div class="item"><a href="/shop/toys/mini4/other_event.html#tornament" target="_blank"><img src="image/icon_stage.png" alt="ステーションチャレンジ・体験会情報" class="tournament"></a><p class="itemtext">ミニ四駆大会情報</p></div>
+<div class="item"><a href="/shop/toys/mini4/mini4product.html#courselist" target="_blank"><img src="image/icon_tenpo.png" alt="コース常設・ミニ四駆取扱い店舗" class="handling"></a><p class="itemtext">コース常設・</p><span class="itemtextw">ミニ四駆取扱い店舗</span></div>
+<div class="item"><a href="https://twitter.com/kojimamini4wd/" target="_blank"><img src="image/icon_twitter.png" alt="コジマミニ四駆倶楽部ツイッター" class="twitter"></a><p class="itemtext">ツイッター</p><p class="itemtextw">ミニ四駆倶楽部</p></div>
+<div class="item"><a href="https://www.tamiya.com/japan/mini4wd/index.html" target="_blank"><img src="image/icon_tamiya.png" alt="タミヤ公式ページ" class="tamiyahp"></a><p class="itemtext">タミヤ公式</p><p class="itemtextw">サイト</p></div>
+<div class="item"><a href="https://mini4wd-app.bn-ent.net/" target="_blank"><img src="image/icon_tyousoku.png" alt="タミヤ公式超速アプリ" class="tournament"></a><p class="itemtext">タミヤ 超速GP</p></div>
+</div>
+</main>
+<footer>
+<div id="footer"><p>Copyright ©2020 Kojima Co.,Ltd All rights reserverd.</p></div>
+</footer>
+</div>
+</div>
+
+<!--<div id="info">
+    <div id="info_txt">チャレンジカップ 〇〇店エントリー受付中!</div>
+</div>-->
+
+<style>
+#ticker {
+    margin: 0 auto;
+    padding: 10px;
+    width: 600px;
+    text-align: left;
+    border: #ccc 1px solid;
+    position: relative;
+    overflow: hidden;
+}
+ 
+#ticker ul {
+    width: 100%;
+    position: relative;
+}
+ 
+#ticker ul li {
+    width: 100%;
+    display: none;
+}  
+</style>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    
+<script>
+$(function(){
+    $(window).load(function(){
+        var setul = $('#ticker');//・ニュースティッカー用リスト一式を囲うエリアのクラス名（IDでも可）
+        var speed = 1000;//・切り替わる際のエフェクトスピード時間
+        var waiting_time = 3000;//・切り替わるまでの待機時間
+        var easing = 'swing';//・切り替わる際のエフェクトのイージング
+ 
+        setul.each(function(){
+            var choice = $(this).attr('rel'); // 'fade' or 'roll' or 'slide'
+ 
+            var this_obj = $(this);
+            var this_ul = this_obj.children('ul');
+            var this_li = this_obj.find('li');
+            var list = this_obj.find('li:first');
+ 
+            var ul_width = this_ul.width();
+            var list_height = this_li.height();
+            this_obj.css({height:(list_height)});
+            this_li.css({top:'0',left:'0',position:'absolute'});
+ 
+            var li_count = this_li.length;
+ 
+            if(choice == 'fade') {
+                list.css({display:'block',opacity:'0',zIndex:'98'}).stop().animate({opacity:'1'},speed,easing).addClass('showlist');
+                if(li_count > 1) {
+                    setInterval(function(){
+                        var active_show = this_obj.find('.showlist');
+                        active_show.animate({opacity:'0'},speed,easing,function(){
+                            $(this).next().css({display:'block',opacity:'0',zIndex:'99'}).animate({opacity:'1'},speed,easing).addClass('showlist').end().appendTo(this_ul).css({display:'none',zIndex:'98'}).removeClass('showlist');
+                        });
+                    },waiting_time);
+                }
+            } else if(choice == 'roll') {
+                list.css({top:'3em',display:'block',opacity:'0',zIndex:'98'}).stop().animate({top:'0',opacity:'1'},speed,easing).addClass('showlist');
+                if(li_count > 1) {
+                    setInterval(function(){
+                        var active_show = this_obj.find('.showlist');
+                        active_show.animate({top:'-3em',opacity:'0'},speed,easing).next().css({top:'3em',display:'block',opacity:'0',zIndex:'99'}).animate({top:'0',opacity:'1'},speed,easing).addClass('showlist').end().appendTo(this_ul).css({zIndex:'98'}).removeClass('showlist');
+                    },waiting_time);
+                }
+            } else if(choice == 'slide') {
+                list.css({left:(ul_width),display:'block',opacity:'0',zIndex:'98'}).stop().animate({left:'0',opacity:'1'},speed,easing).addClass('showlist');
+                if(li_count > 1) {
+                    setInterval(function(){
+                        var active_show = this_obj.find('.showlist');
+                        active_show.animate({left:(-(ul_width)),opacity:'0'},speed,easing).next().css({left:(ul_width),display:'block',opacity:'0',zIndex:'99'}).animate({left:'0',opacity:'1'},speed,easing).addClass('showlist').end().appendTo(this_ul).css({zIndex:'98'}).removeClass('showlist');
+                    },waiting_time);
+                }
+            }
+        });
+    });
+});
+</script>
+
+
+</body></html>
