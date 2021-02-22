@@ -351,5 +351,19 @@ h3 {
   </div>
 </div>
 <p class="bcs_copy">COPYRIGHT(C)2004-2021 Kojima.Co.Ltd ALL RIGHTS RESERVED.</p>
+<script>
+$(window).on("resize orientationchange", function (e) {
+	var wsw = window.screen.width;
+	if (wsw <= 480) {
+		//デバイス横幅640以下
+		//<meta name="viewport" content="width=device-width,initial-scale=0.5,minimum-scale=0.5" />
+		$("meta[name='viewport']").attr("content", "width=device-width,initial-scale=0.5,minimum-scale=0.5");
+	} else {
+		//それ以外
+		//<meta name="viewport" content="width=device-width,initial-scale=1">
+		$("meta[name='viewport']").attr("content", "width=device-width,initial-scale=1");
+	}
+}).trigger("resize");
+</script>
 </body>
 </html>
