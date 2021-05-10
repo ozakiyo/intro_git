@@ -5,6 +5,37 @@
 <meta name="robots" content="nofollow,noindex,noarchive">
 <title></title>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script>
+window.onload = function() {
+  jQuery(function($) {
+    var main = function(){
+    var target = $('#target').val()
+　$('#result').html('<img class="loading" src="/wp-content/themes/keni8-child/images/loading.svg">')
+    $.ajax({
+        url: `/wp-content/php/mirror.php?url=${target}`,
+        type: 'GET',
+        dataType: 'html',
+        cache: true
+      }).done(function(data) {
+        console.log("ok");
+        $('#result').html($(data).find('h1').text());
+      }).fail(function(XMLHttpRequest, textStatus, errorThrown) {
+        console.log("error");
+      })
+    }
+
+    $( '.btn-search' ).on('click',main);
+
+    $( '#target' ).keypress( function ( e ) {
+    	if ( e.which == 13 ) {
+        console.log("key" + e.which);
+    		main();
+    		return false;
+    	};
+    });
+  });
+};
+</script>
 </head>
 <body>
 <main>
@@ -23,34 +54,6 @@
 </footer>
 </div>
 </div>
-
-<script>
-var main = function(){
-var target = $('#target').val()
-$('#result').html('<img class="loading" src="/wp-content/themes/keni8-child/images/loading.svg">')
-$.ajax({
-    url: `/wp-content/php/mirror.php?url=${target}`,
-    type: 'GET',
-    dataType: 'html',
-    cache: false
-  }).done(function(data) {
-    console.log("ok");
-    $('#result').html($(data).find('h1').text());
-  }).fail(function(XMLHttpRequest, textStatus, errorThrown) {
-    console.log("error");
-  })
-}
- 
-$('.btn-search').on('click',main);
- 
-$( '#target' ).keypress( function ( e ) {
-  if ( e.which == 13 ) {
-    console.log("key" + e.which);
-    main();
-    return false;
-  };
-});
-</script>
     
 </body>
 </html>
