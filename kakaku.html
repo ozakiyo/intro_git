@@ -1,22 +1,28 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <!-- jQueryの読み込み -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-</head>
-<body>
-<form>
-JANコード：<input type="number" name="jan" id="jan"> 
-税込み価格：<output name="jyosin_price" id="jyosin_price"></output>
-
-<input type="button" onclick="show_price();" value="ジョーシン">
-<script>
-function show_price() {
-  (document.getElementById('jyosin_price').value = "?KEYWORD=&KEY=ZS_ALL&KEY_M=ALL&QS=&QK="+parseInt(document.getElementById('jan').value)+"&category_id=&REQUEST_CODE=1");
-}
+<script type="text/javascript">
+    function jump(リンク先) {
+        var ＵＲＬ;
+        var パラメタ;
+        textboxValue = document.フォーム１.宛先.value;
+        if (リンク先 == 3) {
+            ＵＲＬ = "https://joshinweb.jp/srhzs.html";
+            パラメタ = "?KEYWORD=&KEY=ZS_ALL&KEY_M=ALL&QS=&QK=" + textboxValue + "&category_id=&REQUEST_CODE=1";
+        }
+        if (リンク先 == 4) {
+            ＵＲＬ = "https://joshinweb.jp/srhzs.html";
+            パラメタ = "?KEYWORD=&KEY=ZS_ALL&KEY_M=ALL&QS=&QK=" + textboxValue + "&category_id=&REQUEST_CODE=1";
+        }
+        location.href = ＵＲＬ + パラメタ;
+    }
 </script>
-</form>
-<a href="javascript:window.location.href='https://joshinweb.jp/srhzs.html'+jyosin_price+'/';">test</a>
-</body>
-</html>
+
+<p>
+<input type="button" value="例３：receive3へ" onclick="jump(3)">
+<input type="button" value="例４：receive4へ" onclick="jump(4)">
+</p>
+
+<form name="フォーム１">
+	<p>テキストボックス<br>
+	<label>メールアドレス：<input type="text" name="宛先" size="40"></label></p>
+	
+	<p><input type="button" value="入力" onClick="getform()">　
+	<input type="reset" value="リセット"></p>
