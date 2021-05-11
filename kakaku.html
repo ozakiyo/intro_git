@@ -20,7 +20,7 @@ $(function(){
             //文字が入ってる時だけ
             param = escape(param);
             //エスケープ処理
-            $(this).attr("href","https://joshinweb.jp/srhzs.html?KEYWORD=&KEY=ZS_ALL&KEY_M=ALL&QS=&QK=.php?param=" + param);
+            $(this).attr("href","https://joshinweb.jp/srhzs.html?KEYWORD=&KEY=ZS_ALL&KEY_M=ALL&QS=&QK= + param);
             // window.location.href=""./aaa.php?param=" + param";
             // でもOK
         }else{
