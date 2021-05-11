@@ -7,31 +7,21 @@
 </head>
 <body>
 
-<!-- テキストフォーム -->
-<input type="text" id="hoge"><a href="#" id="link">リンク</a>
+<form>
+JANコード：<input type="number" name="jan" id="jan"> 
+税込み価格：<output name="jyosin_price" id="jyosin_price"></output>
 
-
-<!-- ▼ jQueryによる処理 ▼ -->
+<input type="button" onclick="show_price();" value="ジョーシン">
 <script>
-$(function(){
-    $("#link").click(function(){
-        var param = $("#hoge").val();
-        if (param != ""){
-            //文字が入ってる時だけ
-            param = escape(param);
-            //エスケープ処理
-            $(this).attr("href","https://joshinweb.jp/srhzs.html?KEYWORD=&KEY=ZS_ALL&KEY_M=ALL&QS=&QK= + param);
-            // window.location.href=""./aaa.php?param=" + param";
-            // でもOK
-        }else{
-            //リンク無効
-            return false;
-        }
-    });
-});
+function show_price() {
+  (document.getElementById('jyosin_price').value = 
+    "https://joshinweb.jp/srhzs.html?KEYWORD=&KEY=ZS_ALL&KEY_M=ALL&QS=&QK="+parseInt(document.getElementById('jan').value)+"&category_id=&REQUEST_CODE=1");
+    
+}
+
 </script>
-<!-- ▲ jQueryによる処理 ▲ -->
+<a href="jyosin_price">test</a>
+</form>
 
 </body>
 </html>
-
