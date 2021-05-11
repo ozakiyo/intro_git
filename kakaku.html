@@ -14,14 +14,14 @@ JANコード：<input type="number" name="jan" id="jan">
 <input type="button" onclick="show_price();" value="ジョーシン">
 <script>
 function show_price() {
-  (document.getElementById('jyosin_price').value = 
-    "https://joshinweb.jp/srhzs.html?KEYWORD=&KEY=ZS_ALL&KEY_M=ALL&QS=&QK="+parseInt(document.getElementById('jan').value)+"&category_id=&REQUEST_CODE=1");
-    
+  (document.getElementById('jyosin_price').value = "?KEYWORD=&KEY=ZS_ALL&KEY_M=ALL&QS=&QK="+parseInt(document.getElementById('jan').value)+"&category_id=&REQUEST_CODE=1");
+
 }
-
 </script>
-<a href=jyosin_price>test1</a>
 </form>
-
+  <script>
+    var id = 123456789;
+  </script>
+  <a href="javascript:window.location.href='https://joshinweb.jp/srhzs.html'+jyosin_price+'/';">hoge</a>
 </body>
 </html>
