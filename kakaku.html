@@ -6,7 +6,6 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </head>
 <body>
-
 <form>
 JANコード：<input type="number" name="jan" id="jan"> 
 税込み価格：<output name="jyosin_price" id="jyosin_price"></output>
@@ -14,11 +13,10 @@ JANコード：<input type="number" name="jan" id="jan">
 <input type="button" onclick="show_price();" value="ジョーシン">
 <script>
 function show_price() {
-  (document.getElementById('jyosin_price').value = "%3FKEYWORD%3D%26KEY%3DZS_ALL%26KEY_M%3DALL%26QS%3D%26QK%3D"+parseInt(document.getElementById('jan').value)+"%26category_id%3D%26REQUEST_CODE%3D1");
-
+  (document.getElementById('jyosin_price').value = "?KEYWORD=&KEY=ZS_ALL&KEY_M=ALL&QS=&QK="+parseInt(document.getElementById('jan').value)+"&category_id=&REQUEST_CODE=1");
 }
 </script>
 </form>
-  <a href="javascript:window.location.href='https://joshinweb.jp/srhzs.html'+jyosin_price+'/';">hoge</a>
+<a href="javascript:window.location.href='https://joshinweb.jp/srhzs.html'+jyosin_price+'/';">test</a>
 </body>
 </html>
