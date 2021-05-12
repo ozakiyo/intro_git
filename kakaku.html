@@ -1,29 +1,30 @@
 <script type="text/javascript">
-    function jump(リンク先) {
-        var ＵＲＬ;
-        var パラメタ;
-        textboxValue = document.フォーム１.宛先.value;
-        if (リンク先 == 3) {
-            ＵＲＬ = "https://joshinweb.jp/srhzs.html";
-            パラメタ = "?KEYWORD=&KEY=ZS_ALL&KEY_M=ALL&QS=&QK=" + textboxValue + "&category_id=&REQUEST_CODE=1";
+    function sclay(link_name) {
+        var url;
+        var param;
+        textboxValue = document.input_form.jan.value;
+        if (link_name == 3) {
+            url = "https://joshinweb.jp/srhzs.html";
+            param = "?KEYWORD=&KEY=ZS_ALL&KEY_M=ALL&QS=&QK=" + textboxValue + "&category_id=&REQUEST_CODE=1";
         }
-        if (リンク先 == 4) {
-            ＵＲＬ = "https://joshinweb.jp/srhzs.html";
-            パラメタ = "?KEYWORD=&KEY=ZS_ALL&KEY_M=ALL&QS=&QK=" + textboxValue + "&category_id=&REQUEST_CODE=1";
+        if (link_name == 4) {
+            url = "https://joshinweb.jp/srhzs.html";
+            param = "?KEYWORD=&KEY=ZS_ALL&KEY_M=ALL&QS=&QK=" + textboxValue + "&category_id=&REQUEST_CODE=1";
         }
         //location.href = ＵＲＬ + パラメタ;
-          window.open(ＵＲＬ + パラメタ, '_blank');
+          window.open(url + param, '_blank');
     }
 </script>
 
 <p>
-<input type="button" value="例３：receive3へ" onclick="jump(3)">
-<input type="button" value="例４：receive4へ" onclick="jump(4)">
+<input type="button" value="ジョーシン" onclick="sclay(3)">
+<input type="button" value="ヤマダ" onclick="sclay(4)">
 </p>
 
-<form name="フォーム１">
-	<p>テキストボックス<br>
-	<label>メールアドレス：<input type="text" name="宛先" size="40"></label></p>
-	
-	<p><!--<input type="button" value="入力" onClick="getform()">-->
-	<input type="reset" value="リセット3"></p>
+<form name="input_form">
+<p>
+	<label>JANコード：<input type="text" name="jan" size="40"></label></p>
+<p>
+	<input type="reset" value="リセット">
+</p>
+</form>
