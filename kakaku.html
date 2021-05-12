@@ -8,8 +8,8 @@
             param = "?KEYWORD=&KEY=ZS_ALL&KEY_M=ALL&QS=&QK=" + textboxValue + "&category_id=&REQUEST_CODE=1";
         }
         if (link_name == 4) {
-            url = "https://joshinweb.jp/srhzs.html";
-            param = "?KEYWORD=&KEY=ZS_ALL&KEY_M=ALL&QS=&QK=" + textboxValue + "&category_id=&REQUEST_CODE=1";
+            url = "https://online.nojima.co.jp/app/catalog/list/init";
+            param = "?searchCategoryCode=0&searchMethod=0&searchWord=" + textboxValue;
         }
         //location.href = ＵＲＬ + パラメタ;
           window.open(url + param, '_blank');
@@ -18,7 +18,7 @@
 
 <p>
 <input type="button" value="ジョーシン" onclick="sclay(3)">
-<input type="button" value="ヤマダ" onclick="sclay(4)">
+<input type="button" value="ノジマ" onclick="sclay(4)">
 </p>
 
 <form name="input_form">
