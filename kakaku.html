@@ -3,6 +3,10 @@
         var url;
         var param;
         textboxValue = document.input_form.jan.value;
+	if (link_name == 2) {
+            url = "https://www.kojima.net/ec/prod_list.html";
+            param = "?keyword=" + textboxValue;
+        }
         if (link_name == 3) {
             url = "https://joshinweb.jp/srhzs.html";
             param = "?KEYWORD=&KEY=ZS_ALL&KEY_M=ALL&QS=&QK=" + textboxValue + "&category_id=&REQUEST_CODE=1";
@@ -17,6 +21,7 @@
 </script>
 
 <p>
+<input type="button" value="コジマ" onclick="sclay(2)">
 <input type="button" value="ジョーシン" onclick="sclay(3)">
 <input type="button" value="ノジマ" onclick="sclay(4)">
 </p>
