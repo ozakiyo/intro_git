@@ -1,0 +1,23 @@
+@charset"UTF-8";
+/* 基本設定 */
+*{color: #333}
+html{overflow-y:scroll;min-height:100%}
+body{font-family:'Arial','Hiragino Kaku Gothic Pro','ヒラギノ角ゴ Pro W3','Hiragino Sans GB W3','メイリオ',Meiryo,'ＭＳ Ｐゴシック','MS PGothic',sans-serif;font-size:100%}
+#container{margin:0;line-height:1.5}
+a{color:#00a;text-decoration:underline}
+a:hover{color:#00c;text-decoration:none}
+
+/* フッター */
+#footer{border-top:1px solid #1a274c}
+#footer p{margin:5px;font-size:0.8em;text-align:center}
+
+ol.topicpath{padding:10px;}
+.topicpath li{display:inline;font-size:14px;margin:0 2px 0 0;}
+.topicpath li a{text-decoration:none;color:#999;padding:0 10px 0 0;background:url("../img/icon_topicpath.png") no-repeat right center}
+.topicpath li a:hover{color:#333}
+
+@media screen and (max-width: 639px){
+#footer{width:320px;margin:15px auto}
+#footer p{margin:15px 5px 5px;font-size:0.75em;text-align:center}
+.pc{display:none}
+}

@@ -1,0 +1,28 @@
+@charset"UTF-8";
+/* ヘッダー用　*/
+#Logo{position:absolute;left:0px;top:0px;width:187px;height:48px;}
+#Logo img{width:177px;height:55px;margin:0;}
+#translate{position:absolute;left:197px;top:7px;width:940px;height:25px;font-size:0.8em;color#555;}
+#translate a{text-decoration:none;color:#555;}
+#utilyLink {position:absolute;height:20px;width:240px;top:0px;right:0px;}
+#utilyLink img{width:240px;;}
+#siteNavigation{position:absolute;left:195px;top:27px;width:867px;height:33px;}
+#siteNavigation ul{list-style:none;margin:0px;padding:0px;}
+#siteNavigation li{list-style:none;display:inline;margin:0px;padding:0px;}
+#siteNavigation li a {display:block;float:left;margin:0px 2px 0px 0px;padding:0px;font-size:1px;text-decoration:none;}
+#siteNavigation span{visibility:hidden;overflow-y:hidden;}
+#siteNavigation li a#tempo{background-image:url(../img/navi_Tempo.gif);background-repeat:no-repeat;overflow-y:hidden;width:93px;height:33px;background-position:0 -33px;}
+#siteNavigation li a#business{background-image:url(../img/navi_Business.gif);background-repeat:no-repeat;overflow-y:hidden;width:93px;height:33px;}
+#siteNavigation li a#ir{background-image:url(../img/navi_IR.gif);background-repeat:no-repeat;overflow-y:hidden;width:93px;height:33px;}
+#siteNavigation li a#recruit{background-image:url(../img/navi_rcrt.gif);background-repeat:no-repeat;overflow-y:hidden;width:93px;height:33px;}
+/*btn ec*/
+#siteNavigation li.ec a#ec{background-image:url(../img/navi_ec.gif);background-repeat:no-repeat;overflow-y:hidden;width:180px;height:26px;margin:2px 0 0 180px;}
+#siteNavigation li.ec a:hover{background-position:0px -26px;}
+/*tab*/
+#siteNavigation li a:hover{background-position:0px -33px;}
+#header{border-bottom:5px solid #00135D;width:940px;position:relative;background-color:#FFFFFF;height:60px;voice-family:"\"}\"";voice-family:inherit;}
+
+@media screen and (max-width: 639px){
+#header{border-bottom: 5px solid #00135D;width:100%;position:relative;background-color:#fff;height:60px;margin:0 auto;}
+.pc{display:none!important}
+}
