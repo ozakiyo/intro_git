@@ -1,0 +1,252 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <!--#include virtual="/inc_tag/google/gtm_head.html" -->
+    <meta http-equiv="Content-Type" content="text/html; charset=shift_jis" />
+    <title>kojima.net - 家電リフォーム │ イベント情報 </title>
+    <link href="../../shared/low.css" rel="stylesheet" type="text/css" />
+    <link href="../../shared/screen.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="common/css/import.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="common/css/test.css" rel="stylesheet" type="text/css" media="all" />
+
+    <!-- jQuery library (served from Google) -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <!-- bxSlider Javascript file -->
+    <script src="js/jquery.bxslider.min.js"></script>
+    <script src="js/test.js"></script>
+
+    <!-- bxSlider CSS file -->
+    <link href="common/css/jquery.bxslider.css" rel="stylesheet" />
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.bxslider').bxSlider({
+                auto: true,
+            });
+        });
+
+    </script>
+    <SCRIPT type="text/javascript" src="js/opacity-rollover2.1.js"></SCRIPT>
+    <script type="text/javascript">
+        $(function () {
+            //クリックしたときのファンクションをまとめて指定
+            $('.tab li').click(function () {
+
+                //.index()を使いクリックされたタブが何番目かを調べ、
+                //indexという変数に代入します。
+                var index = $('.tab li').index(this);
+
+                //コンテンツを一度すべて非表示にし、
+                $('.content li').css('display', 'none');
+
+                //クリックされたタブと同じ順番のコンテンツを表示します。
+                $('.content li').eq(index).css('display', 'block');
+
+                //一度タブについているクラスselectを消し、
+                $('.tab li').removeClass('select');
+
+                //クリックされたタブのみにクラスselectをつけます。
+                $(this).addClass('select')
+            });
+        });
+
+    </script>
+    <script type="text/javascript">
+        (function ($) {
+            $(function () {
+                $('.ov').wink(200);
+            });
+        })(jQuery);
+
+    </script>
+    <script type="text/javascript">
+    $(function() {
+        var display = function() {
+            if ($(this).scrollTop() > 100) { //scroll量を測定
+                $("#jisedai").fadeIn();
+            } else {
+                $("#jisedai").fadeOut();
+            }
+        };
+        $(window).on("scroll", display); //clickアクション
+        $("#jisedai p.close a").click(function() {
+            $("#jisedai").fadeOut();
+            $(window).off("scroll", display);
+        });
+    });
+</script>
+
+<style>
+
+/* Scroll Animation */
+
+ #jisedai {
+            position: relative;
+            cursor: pointer;
+            width: 10px;
+            display: none;
+            font-family: "メイリオ", "Meiryo", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "ＭＳ Ｐゴシック", Osaka, sans-serif !important;
+        }
+
+#jisedai .jisedai_img {
+            position: fixed;
+            bottom: 150px;
+            left: 600px;
+            z-index: 88;
+        }
+
+.jisedai_img_inner {
+            box-sizing: border-box;
+            padding: 10px;
+            background-color: none;
+            border-radius: 10px;
+        }
+
+#jisedai .jisedai_img_inner a {
+            display: block;
+        }
+
+#jisedai .jisedai_img p.close {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+        }
+
+#jisedai .jisedai_img p.close a {
+            display: block;
+            width: 25px;
+            height: 25px;
+            background-color: #ccc;
+            border-radius: 25px;
+            text-align: center;
+        }
+
+ #jisedai .jisedai_img p.close a span {
+            display: block;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            }
+
+#jisedai .jisedai_img p.close a i {
+            font-size: 20px!important;
+            z-index: 888;
+            color: #222;
+            }
+
+</style>
+
+</head>
+
+<body id="tempoP">
+    <!--#include virtual="/inc_tag/google/gtm_body.html" -->
+    <!--ヘッダの「今ここにいます」判別のためのID-->
+    <DIV ID="back">
+        <DIV ID="head">
+            <DIV>
+                <!-- renewal include -->
+                <!--
+<!--#include virtual="/shop/headernavi5.htm" -->
+                <!-- <NESY-include file="/business/headernavi2.htm" parse="on">
+<!-- renewal include -->
+            </DIV>
+
+            <!--ヘッダーとサイドバーインクルード挿入　△-->
+            <!--メインコンテンツ領域　▽▽▽-->
+
+            <div class="wrapper_ref">
+                <div class="refrom_newbox">
+                    <div id="mainer">
+                        <div id="alldenka">
+                            <div id="new_gnavi">
+                                <ul>
+                                    <li class="er_g_navi01"><a href="index.htm"><span>トップへ戻る</span></a></li>
+                                    <li class="er_g_navi02"><a href="plan/index.htm"><span>リフォームメニュー</span></a></li>
+                                    <li class="er_g_navi03"><a href="list.htm"><span>太陽光発電・オール電化</span></a></li>
+                                    <li class="er_g_navi04"><a href="flow.htm"><span>お見積もり～ご成約までの流れ</span></a></li>
+                                    <li class="er_g_navi05"><a href="event.htm" class="on"><span>イベント情報</span></a></li>
+                                    <li class="er_g_navi06"><a href="https://fofa.jp/kojima/a.p/131/"
+                                            target="_blank"><span>お問い合わせ</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!--navi-->
+                <h2 class="ref_title">水回りのリフォーム</h2>
+                <div class="tosou_box">
+                    <img src="kurashi_ouen/img/m_logo1.jpg" alt="水周りの悩みをコジマが解決！">
+                    <dl class="toggle_contents">
+                        <dt class="toggle_title toggle_c1">キッチンリフォーム快適提案<span class="toggle_btn">開く</span></dt>
+                        <dd>
+                            <ul>
+                                <li><img src="kurashi_ouen/img/m_img1.jpg" alt="天板編 デザインでも実用性でも妥協したくない！"></li>
+                                <li><img src="kurashi_ouen/img/m_img2.jpg" alt="キャビネット編 開閉方法も要チェック！"></li>
+                                <li><img src="kurashi_ouen/img/m_img3.jpg" alt="レンジフード編 メンテナンスが簡単なものがGood！"></li>
+                            </ul>
+                        </dd>
+                    </dl>
+                    <dl class="toggle_contents">
+                        <dt class="toggle_title toggle_c2">バスリフォーム快適提案<span class="toggle_btn">開く</span></dt>
+                        <dd>
+                            <ul>
+                                <li><img src="kurashi_ouen/img/m_img4.jpg" alt="浴槽編 オシャレな浴槽で、リラックスしたい！"></li>
+                                <li><img src="kurashi_ouen/img/m_img5.jpg" alt="水栓編 節水で省エネ。水流もいろいろ選びたい！"></li>
+                                <li><img src="kurashi_ouen/img/m_img6.jpg" alt="換気/暖房編 温度差の緩和には暖房機能付がGood！"></li>
+                            </ul>
+                        </dd>
+                    </dl>
+                    <dl class="toggle_contents">
+                        <dt class="toggle_title toggle_c3">トイレリフォーム快適提案<span class="toggle_btn">開く</span></dt>
+                        <dd>
+                            <ul>
+                                <li><img src="kurashi_ouen/img/m_img7.jpg" alt="節水編 少ない水量でキレイを実現！"></li>
+                                <li><img src="kurashi_ouen/img/m_img8.jpg" alt="便座編 好みに合わせて多彩な機能から選べます！"></li>
+                                <li><img src="kurashi_ouen/img/m_img9.jpg" alt="お手入れ編 汚れのつきにくい素材、形状でいつもキレイに！"></li>
+                            </ul>
+                        </dd>
+                    </dl>
+
+                </div>
+                <!--tosou_box-->
+
+                <div class="txt_c">
+                    <a href="https://fofa.jp/kojima/a.p/131/" target="_blank"><img src="image/btn01.gif"
+                            alt="太陽光発電・家電リフォーム　お問い合せ窓口" class="ov"></a>
+                </div>
+            </div>
+
+                    <!-- contact_animation_kojibo-->
+
+                    <div id="jisedai" class="ov fade">
+                        <div class="jisedai_img">
+                            <div class="jisedai_img_inner">
+                                <a href="https://fofa.jp/kojima/a.p/131/">
+                                    <p><img src="image/006.gif" alt="お問い合わせはこちら" width="308px" height="140px"></p>
+                                </a>
+                            </div>
+
+                            <p class="close"><a href="javascript:void(0)"><span>閉じる</span><i aria-hidden="true" class="fa fa-times"></i></a></p>
+                        </div>
+                    </div><!--jisedai-->
+
+        <!--ertop-->
+        <!--↓ショルダー-->
+
+    <!-- 
+<!--#include virtual="/shop/e-reform/shoulder.htm" -->
+    <!--mainlift-->
+    <!--メインコンテンツ領域　△△△-->
+    <!--全ての内容をこの中に挿入　△-->
+    </div>
+                        <!--contents-->
+                    </div>
+                </div>
+
+    </div>
+
+
+
+
+</body>
+
+</html>
