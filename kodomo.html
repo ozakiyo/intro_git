@@ -1,0 +1,315 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <!--#include virtual="/inc_tag/google/gtm_head.html" -->
+    <meta http-equiv="Content-Type" content="text/html; charset=shift_jis" />
+    <title>kojima.net - 家電リフォーム │ こどもみらい住宅支援事業 </title>
+    <link href="../../shared/low.css" rel="stylesheet" type="text/css" />
+    <link href="../../shared/screen.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="common/css/import.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="common/css/test.css" rel="stylesheet" type="text/css" media="all" />
+
+    <!-- jQuery library (served from Google) -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <!-- bxSlider Javascript file -->
+    <script src="js/jquery.bxslider.min.js"></script>
+    <script src="js/test.js"></script>
+    <script src="js/fade.js"></script>
+
+    <!-- bxSlider CSS file -->
+    <link href="common/css/jquery.bxslider.css" rel="stylesheet" />
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.bxslider').bxSlider({
+                auto: true,
+            });
+        });
+
+    </script>
+    <SCRIPT type="text/javascript" src="js/opacity-rollover2.1.js"></SCRIPT>
+    <script type="text/javascript">
+        $(function () {
+            //クリックしたときのファンクションをまとめて指定
+            $('.tab li').click(function () {
+
+                //.index()を使いクリックされたタブが何番目かを調べ、
+                //indexという変数に代入します。
+                var index = $('.tab li').index(this);
+
+                //コンテンツを一度すべて非表示にし、
+                $('.content li').css('display', 'none');
+
+                //クリックされたタブと同じ順番のコンテンツを表示します。
+                $('.content li').eq(index).css('display', 'block');
+
+                //一度タブについているクラスselectを消し、
+                $('.tab li').removeClass('select');
+
+                //クリックされたタブのみにクラスselectをつけます。
+                $(this).addClass('select')
+            });
+        });
+
+    </script>
+    <script type="text/javascript">
+        (function ($) {
+            $(function () {
+                $('.ov').wink(200);
+            });
+        })(jQuery);
+
+    </script>
+    <script type="text/javascript">
+        $(function () {
+            var display = function () {
+                if ($(this).scrollTop() > 580) { //scroll量を測定
+                    $("#jisedai").fadeIn();
+                } else {
+                    $("#jisedai").fadeOut();
+                }
+            };
+            $(window).on("scroll", display); //clickアクション
+            $("#jisedai p.close a").click(function () {
+                $("#jisedai").fadeOut();
+                $(window).off("scroll", display);
+            });
+        });
+    </script>
+    
+
+    <style>
+        .tosou_box img {
+            vertical-align: bottom;
+        }
+
+        .tosou_box {
+            margin-bottom: 2rem;
+        }
+
+        .tosou_box p {
+            margin-left: 30px;
+        }
+
+
+        /* Scroll Animation */
+
+        #jisedai {
+            position: relative;
+            cursor: pointer;
+            width: 10px;
+            display: none;
+            font-family: "メイリオ", "Meiryo", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "ＭＳ Ｐゴシック", Osaka, sans-serif !important;
+        }
+
+        #jisedai .jisedai_img {
+            position: fixed;
+            bottom: 150px;
+            right: 17%;
+            z-index: 88;
+        }
+
+        .jisedai_img_inner {
+            box-sizing: border-box;
+            padding: 10px;
+            background-color: none;
+            border-radius: 10px;
+        }
+
+        #jisedai .jisedai_img_inner a {
+            display: block;
+        }
+
+        #jisedai .jisedai_img p.close {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+        }
+
+        #jisedai .jisedai_img p.close a {
+            display: block;
+            width: 25px;
+            height: 25px;
+            background-color: #ccc;
+            border-radius: 25px;
+            text-align: center;
+        }
+
+        #jisedai .jisedai_img p.close a span {
+            display: block;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+        }
+
+        #jisedai .jisedai_img p.close a i {
+            font-size: 20px !important;
+            z-index: 888;
+            color: #222;
+        }
+
+        /* Step */
+
+        .step {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .step li {
+            position: relative;
+            width: 700px;
+            background: #fc8b3a;
+            padding: 0.5em;
+            margin-bottom: 1.2em;
+            margin-left: 20px;
+            text-align: center;
+            color: #fff;
+            font-size: 2rem !important;
+        }
+
+        .step li:after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 0;
+            bottom: -10px;
+            left: 330px;
+            border-style: solid;
+            border-color: #fc8b3a transparent transparent transparent;
+            border-width: 10px 50px 0 50px;
+            z-index: 1;
+        }
+
+        p.small{
+            font-size: 1rem;
+            color: #fff;
+        }
+
+    </style>
+
+</head>
+
+<body id="tempoP">
+    <!--#include virtual="/inc_tag/google/gtm_body.html" -->
+    <!--ヘッダの「今ここにいます」判別のためのID-->
+                <!-- renewal include -->
+                <!-- 
+<!--#include virtual="/shop/headernavi5.htm" -->
+                <!-- <NESY-include file="/business/headernavi3.htm" parse="on">
+<!-- renewal include -->
+    <div ID="back">
+            <!--ヘッダーとサイドバーインクルード挿入　△-->
+            <!--メインコンテンツ領域　▽▽▽-->
+
+            <div class="wrapper_ref">
+                <div class="refrom_newbox">
+                    <div id="mainer">
+                        <div id="alldenka">
+                            <div id="new_gnavi">
+                                <ul>
+                                    <li class="er_g_navi01"><a href="index.htm"><span>トップへ戻る</span></a></li>
+                                    <li class="er_g_navi02"><a href="plan/index.htm"><span>リフォームメニュー</span></a></li>
+                                    <li class="er_g_navi03"><a href="list.htm"><span>太陽光発電・オール電化</span></a></li>
+                                    <li class="er_g_navi04"><a href="flow.htm"><span>お見積もり～ご成約までの流れ</span></a></li>
+                                    <li class="er_g_navi05"><a href="event.htm" class="on"><span>イベント情報</span></a></li>
+                                    <li class="er_g_navi06"><a href="https://fofa.jp/kojima/a.p/131/"
+                                            target="_blank"><span>お問い合わせ</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!--navi-->
+                <div class="tosou_box">
+                    <img src="kodomo/k_mirai_0.png" alt="こどもみらい住宅支援事業">
+                    <img src="kodomo/k_mirai_1.png" alt="今がチャンス！補助金最大30万円お得にリフォーム">
+                </div>
+                <div class="tosou_box">
+
+                    <img src="kodomo/k_mirai_2.png" alt="コジマの対象リフォームはこちら">
+                </div>
+
+                <div class="scroll-fade tosou_box">
+                    <img src="kodomo/k_mirai_3.png" alt="対象リフォーム商品">
+                    <img src="kodomo/k_mirai_4.png" alt="ご注意ください！補助金申請は必須工事を含む合計補助金額5万円以上が対象です。">
+                </div>
+
+                <div class="tosou_box">
+                    <img src="kodomo/k_mirai_5.png" alt="必須工事一覧">
+                    <p>※補助金対象商品は、一部対象外商品がございます</p>
+                    <img src="kodomo/k_mirai_6.png" alt="任意工事一覧">
+                </div>
+                <div class="tosou_box">
+                    <p>※補助金対象商品は、一部対象外商品がございます</p>
+                </div>
+                <h2 class="ref_title">例えば…</h2>
+                <div class="tosou_box">
+                    <img src="kodomo/k_mirai_7.png" alt="節水型トイレとビルトインIHをご購入">
+                    <img src="kodomo/k_mirai_7_1.png" alt="補助金申請にはあと18,000円必要だなぁ…">
+                </div>
+                <div class="tosou_box">
+                    <img src="kodomo/k_mirai_9.png" alt="さらにコジマなら">
+                    <img src="kodomo/k_mirai_10.png" alt="エアコンをご購入で、コジマでまとめて補助金申請ができます">
+                    <img src="kodomo/k_mirai_7_2.png" alt="エアコンをまとめて購入で、補助金申請条件クリア！">
+                    <p>※画像はイメージです</p>
+                    <p>※商品選定はあくまで一例となります。</p>
+                </div>
+                <div class="tosou_box">
+                    <img src="kodomo/k_mirai_11.png" alt="お急ぎください！">
+                    <p>※他社で対象商品をお買い上げの場合、当社で申請手続きはできません。ご了承ください。</p>
+                    <p>※ビックカメラグループでは一部取り扱いのない場合がございます。</p>
+                    <p>※申請手続きは、ご購入の店舗までお問い合わせください。</p></div>
+                <div class="tosou_box">
+                    <ol class="step">
+                        <li>請負契約<br>2021年11月26日～2023年3月31日
+                        </li>
+                        <li>着工<br>2022年1月19日～</li>
+                        <li>お引渡し／申請期間<br>～2023年3月31日<br>
+                        <p class="small">※予算に達した時点で終了となります。</p></li>
+                    </ol>
+                </div>
+                <div class="tosou_box">
+                        <p>その他対象のリフォームは <a href="https://stg.kojima.net/shop/shoplist/index.html" target="_blank">お近くのコジマ</a> もしくは <a href="https://kodomo-mirai.mlit.go.jp/" target="_blank">こどもみらい住宅支援事業 事務局</a>ホームページをご覧ください。
+                        </p>
+                </div>
+                <div class="txt_c">
+                    <a href="https://fofa.jp/kojima/a.p/131/" target="_blank"><img src="image/btn01.gif"
+                            alt="太陽光発電・家電リフォーム　お問い合せ窓口" class="ov"></a>
+                </div>
+                </div>
+                        <!--contents-->
+
+            <!-- contact_animation_kojibo-->
+
+            <div id="jisedai" class="ov fade">
+                <div class="jisedai_img">
+                    <div class="jisedai_img_inner">
+                        <a href="https://fofa.jp/kojima/a.p/131/">
+                            <p><img src="image/006.gif" alt="お問い合わせはこちら" width="308px" height="140px"></p>
+                        </a>
+                    </div>
+
+                    <p class="close"><a href="javascript:void(0)"><span>閉じる</span><i aria-hidden="true"
+                                class="fa fa-times"></i></a></p>
+                </div>
+            </div><!--jisedai-->
+
+
+
+            <!--ertop-->
+            <!--↓ショルダー-->
+        <!--
+<!--#include virtual="/shop/e-reform/shoulder.htm" -->
+        <!--mainlift-->
+        <!--メインコンテンツ領域　△△△-->
+        <!--全ての内容をこの中に挿入　△-->
+    </div>
+            </div><!--wrapper_ref-->
+                    </div>
+
+
+    
+
+</body>
+
+</html>
