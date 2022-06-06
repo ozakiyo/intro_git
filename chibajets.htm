@@ -305,6 +305,115 @@ h3 {
 
 }*/
 </style>
+ <style>
+        .tosou_box img {
+            vertical-align: bottom;
+        }
+
+        .tosou_box {
+            margin-bottom: 2rem;
+        }
+
+        .tosou_box p {
+            margin-left: 30px;
+        }
+
+
+        /* Scroll Animation */
+
+        #jisedai {
+            position: relative;
+            cursor: pointer;
+            width: 10px;
+            display: none;
+            font-family: "メイリオ", "Meiryo", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "ＭＳ Ｐゴシック", Osaka, sans-serif !important;
+        }
+
+        #jisedai .jisedai_img {
+            position: fixed;
+            bottom: 150px;
+            right: 17%;
+            z-index: 88;
+        }
+
+        .jisedai_img_inner {
+            box-sizing: border-box;
+            padding: 10px;
+            background-color: none;
+            border-radius: 10px;
+        }
+
+        #jisedai .jisedai_img_inner a {
+            display: block;
+        }
+
+        #jisedai .jisedai_img p.close {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+        }
+
+        #jisedai .jisedai_img p.close a {
+            display: block;
+            width: 25px;
+            height: 25px;
+            background-color: #ccc;
+            border-radius: 25px;
+            text-align: center;
+        }
+
+        #jisedai .jisedai_img p.close a span {
+            display: block;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+        }
+
+        #jisedai .jisedai_img p.close a i {
+            font-size: 20px !important;
+            z-index: 888;
+            color: #222;
+        }
+
+        /* Step */
+
+        .step {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .step li {
+            position: relative;
+            width: 700px;
+            background: #fc8b3a;
+            padding: 0.5em;
+            margin-bottom: 1.2em;
+            margin-left: 20px;
+            text-align: center;
+            color: #fff;
+            font-size: 2rem !important;
+        }
+
+        .step li:after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 0;
+            bottom: -10px;
+            left: 330px;
+            border-style: solid;
+            border-color: #fc8b3a transparent transparent transparent;
+            border-width: 10px 50px 0 50px;
+            z-index: 1;
+        }
+
+        p.small{
+            font-size: 1rem;
+            color: #fff;
+        }
+
+    </style>
 </head>
 <body><!--#include virtual="/inc_tag/google/gtm_body.html" -->
 <!--ヘッダの「今ここにいます」判別のためのID--> 
